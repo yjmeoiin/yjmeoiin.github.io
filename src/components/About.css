@@ -1,0 +1,102 @@
+.about {
+  background: var(--gradient-light);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-subtitle {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  line-height: 1.8;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.highlight-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.highlight-item:nth-child(1) .highlight-icon {
+  animation-delay: 0s;
+}
+
+.highlight-item:nth-child(2) .highlight-icon {
+  animation-delay: 0.2s;
+}
+
+.highlight-item:nth-child(3) .highlight-icon {
+  animation-delay: 0.4s;
+}
+
+.highlight-item:nth-child(4) .highlight-icon {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.highlight-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.highlight-item p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+/* 반응형 */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-item {
+    padding: 1.5rem;
+  }
+}
+
