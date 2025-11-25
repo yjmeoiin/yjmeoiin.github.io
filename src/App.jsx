@@ -11,6 +11,8 @@ import Footer from './components/Footer'
 function App() {
   const [scrolled, setScrolled] = useState(false)
 
+
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
