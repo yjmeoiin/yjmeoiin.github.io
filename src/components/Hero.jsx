@@ -28,14 +28,6 @@ function Hero() {
             직관적인 게임 UI를 디자인합니다
           </p>
           <div className="hero-buttons">
-            <a 
-              href="/2025 여지민 이력서.pdf"
-              className="btn btn-outline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              이력서 보기
-            </a>
             <button 
               className="btn btn-primary"
               onClick={() => scrollToSection('portfolio')}
