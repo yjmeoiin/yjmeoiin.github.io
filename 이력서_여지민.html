@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서 - 여지민</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #1a1a1a;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-section {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-section li {
+            padding: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        .info-section strong {
+            color: #667eea;
+            font-weight: 600;
+            min-width: 100px;
+            display: inline-block;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .career-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .career-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .career-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .career-period {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .project-item {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .skill-level {
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        .skill-desc {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        .strength-item {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #764ba2;
+        }
+
+        .strength-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-top: 5px;
+        }
+
+        .portfolio-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .portfolio-link:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 30px 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>이력서</h1>
+
+        <div class="info-section">
+            <h2>기본 정보</h2>
+            <ul>
+                <li><strong>이름:</strong> 여지민</li>
+                <li><strong>직무:</strong> 게임 UX/UI 디자이너 / Product Designer</li>
+                <li><strong>이메일:</strong> [이메일 주소]</li>
+                <li><strong>연락처:</strong> [전화번호]</li>
+                <li><strong>포트폴리오:</strong> <a href="https://yjmeoiin.github.io" class="portfolio-link" target="_blank">https://yjmeoiin.github.io</a></li>
+            </ul>
+        </div>
+
+        <div class="intro">
+            게임 속 경험을 만드는 UX/UI 디자이너입니다.<br>
+            다양한 환경에서 빠르게 적응하며, 사용자 중심의 게임 UI/UX를 설계합니다.
+        </div>
+
+        <h2>학력</h2>
+        <div class="career-item">
+            <div class="career-header">
+                <div class="career-title">명지전문대학교 | 산업디자인과</div>
+                <div class="career-period">2019.03 ~ 2022.02</div>
+            </div>
+        </div>
+        <div class="career-item">
+            <div class="career-header">
+                <div class="career-title">선린인터넷고등학교 | 멀티미디어과</div>
+                <div class="career-period">2016.03 ~ 2019.02</div>
+            </div>
+        </div>
+
+        <h2>경력</h2>
+        
+        <div class="career-item">
+            <div class="career-header">
+                <div class="career-title">컨샐러드 | Product Designer</div>
+                <div class="career-period">2021.01 ~ 2025.01 (4년)</div>
+            </div>
+
+            <h4>주요 업무</h4>
+            <ul>
+                <li>모바일 게임 UI/UX 설계 및 디자인</li>
+                <li>게임 콘텐츠 상세 기획 및 UX 플로우 설계</li>
+                <li>협업 콘텐츠 및 신규 기능 기획·디자인</li>
+                <li>UI 에셋 제작 (100% 자체 제작)</li>
+                <li>유저 행동 분석 기반 UI 개선</li>
+                <li>UA 영상 기획 및 제작, 마케팅 소재 제작</li>
+                <li>앱 등록 이미지 제작</li>
+                <li>회사 홈페이지 기획 및 디자인</li>
+            </ul>
+
+            <h4>주요 프로젝트</h4>
+            
+            <div class="project-item">
+                <div class="project-title">1. 주디 - 귀여운 슬라임 키우기 (2024.01 ~ 2024.06)</div>
+                <div><span class="badge">상세 기획</span><span class="badge">UI/UX 디자인</span></div>
+                <p style="margin-top: 15px;"><strong>주요 성과:</strong></p>
+                <ul>
+                    <li><strong>세레나 콜라보 이벤트 기획·디자인</strong> (기획 70%, 디자인 100%)
+                        <ul>
+                            <li>광장맵 재구성: 유저 동선 고려한 맵 설계, Unity로 타일맵 배치</li>
+                            <li>배달 미션 & 탈것 시스템: 광장 콘텐츠 보강, 유료 BM 개선</li>
+                            <li>이벤트 포토존 & 미션: 재사용 가능한 포토존 설계, 참여도 향상</li>
+                        </ul>
+                    </li>
+                    <li><strong>길드 콘텐츠</strong> (UX 설계 100%, UI 에셋 제작 100%, 아이콘 제작 100%)
+                        <ul>
+                            <li>길드 운영 시스템, 길드 나무 성장 & 꾸미기</li>
+                        </ul>
+                    </li>
+                    <li><strong>VIP 콘텐츠</strong> (기획 20%, UX 설계 100%, UI 에셋 제작 100%, 아이콘 제작 100%)</li>
+                    <li>UI 에셋 100% 직접 제작</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">2. 마이주디 - 나만의 코디샵 (2024.04 ~ 2024.06)</div>
+                <div><span class="badge">상세 기획</span><span class="badge">UX/UI 디자인</span><span class="badge">앱 등록 이미지 제작</span></div>
+                <p style="margin-top: 15px;"><strong>주요 성과:</strong></p>
+                <ul>
+                    <li>슬라임 육성 콘텐츠: 출생신고서 작성으로 유저 애착 형성, 메인 화면 상태 확인 및 돌보기 설계</li>
+                    <li>꾸미기, 수집, 소통, 자랑 콘텐츠 UI/UX 설계</li>
+                    <li>UI 에셋 100% 직접 제작</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">3. 말랑 메이커 (2024.01 ~ 2024.03)</div>
+                <div><span class="badge">UX/UI 디자인</span><span class="badge">앱 등록 이미지 제작</span></div>
+                <ul>
+                    <li>슬라임 교배·합성 게임의 전체 UI/UX 설계</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">4. 컨샐러드 웹페이지 (2024.07 ~ 2024.09)</div>
+                <div><span class="badge">홈페이지 기획</span><span class="badge">UX/UI 디자인</span></div>
+                <p style="margin-top: 15px;"><strong>주요 성과:</strong></p>
+                <ul>
+                    <li>사용자 여정 기반 정보 구조 설계</li>
+                    <li>6개 주요 페이지 디자인 (메인, ABOUT, CULTURE, GAME, CAREERS, CONTACT)</li>
+                    <li>반응형 웹 디자인 적용</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">5. UA 영상 포트폴리오 (2021 ~ 2025)</div>
+                <div><span class="badge">UA 영상 제작</span><span class="badge">마케팅 이미지 제작</span></div>
+                <p style="margin-top: 15px;"><strong>주요 성과:</strong></p>
+                <ul>
+                    <li>주디: 브이로그 콘셉트 영상 기획·제작 (기획 100%, 제작 100%, 에셋 제작 95%)</li>
+                    <li>마이주디: 영상 기획·제작, 마케팅 이미지 4종 제작</li>
+                    <li>말랑 메이커: UA 영상 3종 제작</li>
+                    <li>다양한 게임 UA 영상 및 마케팅 소재 제작</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="career-item">
+            <div class="career-header">
+                <div class="career-title">깔라만시 스튜디오 | UX Designer</div>
+                <div class="career-period">2020.01 ~ 2021.12 (2년)</div>
+            </div>
+            <h4>주요 업무</h4>
+            <ul>
+                <li>서비스 디자인 및 UX 설계</li>
+                <li>클라이언트 커뮤니케이션 및 외주 프로젝트 수행</li>
+                <li>기획자, 개발자와 협업하여 프로젝트 진행</li>
+            </ul>
+        </div>
+
+        <h2>보유 기술</h2>
+        <h3>디자인 툴</h3>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-name">Figma</div>
+                <div class="skill-level">⭐⭐⭐⭐⭐ (95%)</div>
+                <div class="skill-desc">UI/UX 화면 설계 및 프로토타이핑</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">Photoshop</div>
+                <div class="skill-level">⭐⭐⭐⭐ (85%)</div>
+                <div class="skill-desc">그래픽 디자인 및 이미지 편집</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">Illustrator</div>
+                <div class="skill-level">⭐⭐⭐⭐ (70%)</div>
+                <div class="skill-desc">벡터 그래픽 디자인</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">After Effect</div>
+                <div class="skill-level">⭐⭐⭐ (60%)</div>
+                <div class="skill-desc">UA 영상 제작</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">Aseprite</div>
+                <div class="skill-level">⭐⭐⭐⭐</div>
+                <div class="skill-desc">픽셀 아트 에셋 제작</div>
+            </div>
+        </div>
+
+        <h3>협업 툴</h3>
+        <ul>
+            <li>Unity (타일맵 배치 및 개발팀 협업)</li>
+            <li>Git/GitHub</li>
+        </ul>
+
+        <h2>자격증</h2>
+        <div class="info-section">
+            <ul>
+                <li>2종 보통 운전면허</li>
+            </ul>
+        </div>
+
+        <h2>핵심 역량</h2>
+        
+        <div class="strength-item">
+            <div class="strength-title">1. 빠른 적응력</div>
+            <ul>
+                <li>다양한 환경과 프로젝트에서 신속하게 적응하며 결과물 도출</li>
+                <li>고등학교 시절부터 다양한 디자인 툴 경험으로 새로운 툴 빠른 습득</li>
+            </ul>
+        </div>
+
+        <div class="strength-item">
+            <div class="strength-title">2. 소통 능력</div>
+            <ul>
+                <li>외주 프로젝트 경험으로 다양한 클라이언트와의 효과적인 커뮤니케이션</li>
+                <li>기획자, 개발자와 긴밀히 협업하며 조율하는 능력</li>
+            </ul>
+        </div>
+
+        <div class="strength-item">
+            <div class="strength-title">3. 폭넓은 실무 경험</div>
+            <ul>
+                <li>앱·웹 UI/UX, 게임 UI/UX, 그래픽 작업, 영상 기획 등 다방면 경험</li>
+                <li>기획-디자인-개발의 전체 흐름 이해</li>
+            </ul>
+        </div>
+
+        <div class="strength-item">
+            <div class="strength-title">4. 유저 중심 사고</div>
+            <ul>
+                <li>유저의 동선과 행동을 고려한 UI/UX 설계</li>
+                <li>데이터 기반 사용자 경험 개선</li>
+            </ul>
+        </div>
+
+        <h2>포트폴리오</h2>
+        <div class="info-section">
+            <ul>
+                <li><strong>웹사이트:</strong> <a href="https://yjmeoiin.github.io" class="portfolio-link" target="_blank">https://yjmeoiin.github.io</a></li>
+                <li><strong>주요 프로젝트:</strong> 게임 UI/UX, 웹 디자인, UA 영상 등 상세 포트폴리오 확인 가능</li>
+            </ul>
+        </div>
+
+        <h2>기타</h2>
+        <ul>
+            <li>기획부터 디자인, 에셋 제작까지 전 과정을 직접 수행할 수 있는 올라운더형 디자이너</li>
+            <li>지속적인 자기계발과 새로운 도전을 즐기는 성향</li>
+        </ul>
+    </div>
+</body>
+</html>
+

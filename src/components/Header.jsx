@@ -18,7 +18,16 @@ function Header({ scrolled }) {
         <nav className="nav">
           <div className="logo">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('hero') }}>
-              UI Designer
+              <span className="logo-icon">
+                <img 
+                  src="/icons/logo-icon.png" 
+                  alt="Logo"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+              </span>
+              <span className="logo-text">YEOJIMIN PORTFOLIO</span>
             </a>
           </div>
           
@@ -35,8 +44,6 @@ function Header({ scrolled }) {
           <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about') }}>소개</a></li>
             <li><a href="#portfolio" onClick={(e) => { e.preventDefault(); scrollToSection('portfolio') }}>포트폴리오</a></li>
-            <li><a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills') }}>스킬</a></li>
-            <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>연락처</a></li>
           </ul>
         </nav>
       </div>

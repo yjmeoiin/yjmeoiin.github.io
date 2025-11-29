@@ -1,48 +1,131 @@
 import './About.css'
 
 function About() {
+  const skills = [
+    { name: 'Figma', icon: '/icons/figma.png', level: 95 },
+    { name: 'Photoshop', icon: '/icons/photoshop.png', level: 85 },
+    { name: 'Illustrator', icon: '/icons/illustrator.png', level: 70 },
+    { name: 'After Effect', icon: '/icons/after-effect.png', level: 60 },
+    { name: 'Aseprite', icon: '/icons/aseprite.png', level: 40 }
+  ]
+
+  const experiences = [
+    {
+      period: '2021.06 - 2025.07',
+      company: '컨샐러드',
+      title: 'Product Designer',
+      type: 'career'
+    },
+    {
+      period: '2020.09 - 2021.05',
+      company: '깔라만시 스튜디오',
+      title: 'UX Designer',
+      type: 'career'
+    }
+  ]
+
+  const education = [
+    {
+      period: '2019.03 - 2022.02',
+      school: '명지전문대학교',
+      major: '산업디자인과'
+    },
+    {
+      period: '2016.03 - 2019.02',
+      school: '선린인터넷고등학교',
+      major: '멀티미디어과'
+    }
+  ]
+
   return (
     <section id="about" className="section about">
       <div className="container">
         <h2 className="section-title">소개</h2>
         
-        <div className="about-content">
-          <div className="about-text">
-            <h3 className="about-subtitle">게임 UI/UX의 마법을 만듭니다</h3>
-            <p>
-              저는 게임 내 사용자 인터페이스를 통해 플레이어에게 더 나은 경험을 
-              제공하는 것에 열정을 가진 UI 디자이너입니다.
-            </p>
-            <p>
-              심미성과 기능성의 완벽한 조화를 추구하며, 플레이어가 게임에 
-              몰입할 수 있도록 직관적이고 아름다운 인터페이스를 디자인합니다.
-            </p>
-            <p>
-              다양한 게임 장르와 플랫폼에 대한 경험을 바탕으로, 각 프로젝트의 
-              고유한 특성을 살린 맞춤형 UI 솔루션을 제공합니다.
-            </p>
+        <div className="about-intro">
+          <h3 className="about-subtitle">다양한 환경에서 <strong>빠르게 적응</strong>하는<br/><strong>게임 UX/UI 디자이너</strong>입니다.</h3>
+          <p className="about-description">
+            앱·웹 서비스부터 게임 UX/UI, 브랜딩, 영상 기획까지 다양한 실무 경험을 바탕으로
+            기획-디자인-개발의 전체 흐름을 이해하며, 팀과의 협업을 통해 유연하게 프로젝트를 진행합니다.
+          </p>
+        </div>
+
+        {/* 간단 요약 섹션 */}
+        <div className="about-summary">
+          {/* 스킬 */}
+          <div className="summary-box card">
+            <h3 className="summary-title">
+              <span className="section-icon">🎨</span>
+              기술 스킬
+            </h3>
+            <div className="skills-with-level">
+              {skills.map((skill, idx) => (
+                <div key={idx} className="skill-level-item">
+                  <div className="skill-info">
+                    <img src={skill.icon} alt={skill.name} />
+                  </div>
+                  <div className="skill-content">
+                    <span className="skill-name-text">{skill.name}</span>
+                    <div className="skill-bar-wrapper">
+                      <div className="skill-bar-container">
+                        <div 
+                          className="skill-bar-fill" 
+                          style={{ width: `${skill.level}%` }}
+                        ></div>
+                      </div>
+                      <span className="skill-percentage">{skill.level}%</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="about-highlights">
-            <div className="highlight-item card">
-              <div className="highlight-icon">🎨</div>
-              <h4>디자인 철학</h4>
-              <p>사용자 중심의 아름다운 디자인</p>
+          {/* 경력 */}
+          <div className="summary-box card">
+            <h3 className="summary-title">
+              <span className="section-icon">💼</span>
+              경력
+            </h3>
+            <div className="info-compact">
+              {experiences.map((exp, idx) => (
+                <div key={idx} className="info-item">
+                  <div className="info-header">
+                    <span className="info-icon">
+                      <img src="/icons/logo-icon.png" alt="icon" />
+                    </span>
+                    <div className="info-content">
+                      <strong>{exp.company}</strong>
+                      <span>{exp.title}</span>
+                      <span className="info-period">{exp.period}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="highlight-item card">
-              <div className="highlight-icon">⚡</div>
-              <h4>직관적 UI</h4>
-              <p>복잡함 속의 단순함 추구</p>
-            </div>
-            <div className="highlight-item card">
-              <div className="highlight-icon">🎮</div>
-              <h4>게임 이해</h4>
-              <p>게임 장르별 특화된 경험</p>
-            </div>
-            <div className="highlight-item card">
-              <div className="highlight-icon">✨</div>
-              <h4>디테일 집중</h4>
-              <p>세밀한 요소까지 완벽하게</p>
+          </div>
+
+          {/* 학력 */}
+          <div className="summary-box card">
+            <h3 className="summary-title">
+              <span className="section-icon">🎓</span>
+              학력
+            </h3>
+            <div className="info-compact">
+              {education.map((edu, idx) => (
+                <div key={idx} className="info-item">
+                  <div className="info-header">
+                    <span className="info-icon">
+                      <img src="/icons/logo-icon.png" alt="icon" />
+                    </span>
+                    <div className="info-content">
+                      <strong>{edu.school}</strong>
+                      <span>{edu.major}</span>
+                      <span className="info-period">{edu.period}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

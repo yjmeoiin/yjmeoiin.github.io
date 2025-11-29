@@ -10,9 +10,6 @@ function Footer() {
           <div className="footer-text">
             <p>&copy; {currentYear} Game UI Designer Portfolio. All rights reserved.</p>
           </div>
-          <div className="footer-links">
-            <a href="#hero">맨 위로 ↑</a>
-          </div>
         </div>
       </div>
     </footer>
