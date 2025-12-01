@@ -166,7 +166,7 @@ function Portfolio() {
     },
     {
       id: 3,
-      title: '마이주디 - 나만의 코디샵',
+      title: '마이주디 : 나만의 코디샵',
       category: 'Mobile Game',
       description: '주디의 개선 버전으로 출시된 슬라임 육성 게임입니다.\n귀여운 슬라임을 키우고 꾸미며, 직접 아이템을 그려 나만의 창작물을 만들 수 있습니다.',
       image: '/images/Project3-thumbnail.png', // 카드용 썸네일 이미지
@@ -248,7 +248,7 @@ function Portfolio() {
     },
     {
       id: 2,
-      title: '말랑 메이커',
+      title: '말랑 메이커 : 슬라임 교배 마스터',
       category: 'Mobile Game',
       description: '말랑메이커는 슬라임을 돌보고 교배·합성하여 전설의 마법사로 성장하는 게임입니다.',
       image: '/images/Project2-thumbnail.png', // 카드용 썸네일 이미지
