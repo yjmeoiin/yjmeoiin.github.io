@@ -68,7 +68,7 @@ function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: '주디 - 귀여운 슬라임 키우기',
+      title: '주디: 내가 찍은 도트로 아바타 꾸미기',
       category: 'Mobile Game',
       description: '주디는 귀여운 슬라임과 본인의 아바타를 꾸미고, 직접 아이템을 그리며, 유저들과 소통하는 캐주얼 게임입니다.',
       image: '/images/Project1-thumbnail.png', // 카드용 썸네일 이미지
@@ -432,7 +432,7 @@ function Portfolio() {
             ]
           },
           {
-            title: '마이주디 - 나만의 코디샵',
+            title: '마이주디 : 나만의 코디샵',
             features: [
               {
                 title: 'UA 영상',
@@ -455,7 +455,7 @@ function Portfolio() {
             ]
           },
           {
-            title: '말랑 메이커',
+            title: '말랑 메이커 : 슬라임 교배 마스터',
             features: [
               {
                 title: 'UA 영상',
