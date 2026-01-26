@@ -29,7 +29,7 @@ function Hero() {
           </p>
           <div className="hero-buttons">
             <a 
-              href="/2026 여지민 이력서.pdf"
+              href="/2026%20여지민%20이력서.pdf"
               className="btn btn-outline"
               target="_blank"
               rel="noopener noreferrer"
