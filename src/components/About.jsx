@@ -13,13 +13,13 @@ function About() {
     {
       period: '2021.06 - 2025.07',
       company: '컨샐러드',
-      title: 'Product Designer',
+      title: 'UX/UI Designer',
       type: 'career'
     },
     {
       period: '2020.09 - 2021.05',
       company: '깔라만시 스튜디오',
-      title: 'UX Designer',
+      title: 'UX/UI Designer',
       type: 'career'
     }
   ]

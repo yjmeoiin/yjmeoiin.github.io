@@ -314,7 +314,7 @@ function Portfolio() {
     },
     {
       id: 4,
-      title: '컨샐러드 웹페이지',
+      title: '컨샐러드 홈페이지',
       category: 'Web Design',
       description: '사용자 경험을 고려한 반응형 웹사이트를 기획·디자인했습니다.',
       image: '/images/Project4-thumbnail.png', // 카드용 썸네일 이미지
@@ -322,19 +322,18 @@ function Portfolio() {
       tags: ['홈페이지 기획', 'UX/UI 디자인'],
       details: {
         role: ['홈페이지 기획', 'UX/UI 디자인'],
-        period: '2023.11 ~ 2023.12',
+        period: '2023.11 (약 8일)',
         tools: [
           { name: 'Figma', icon: '/icons/figma.png', description: 'Figma\nUI/UX 화면 설계 및 프로토타이핑에 활용' },
           { name: 'Illustrator', icon: '/icons/illustrator.png', description: 'Illustrator\n벡터 그래픽 디자인에 활용' }
         ],
         sections: [
           {
-            title: '웹페이지 디자인',
-            period: '2023.11 ~ 2023.12 (약 8일)',
+            title: '웹페이지 기획 및 디자인',
             contribution: '기획 100% · UX설계 100% · UI에셋 제작 100%',
             features: [
               {
-                title: '주요 페이지 디자인',
+                title: '웹페이지 디자인',
                 description: '아래 탭을 클릭해 각 페이지 화면을 확인할 수 있습니다.',
                 hasPageTabs: true,
                 pages: [
@@ -373,7 +372,154 @@ function Portfolio() {
               {
                 title: '반응형 디자인',
                 description: '데스크톱, 태블릿, 모바일 등 다양한 디바이스에 최적화된 반응형 디자인을 구현했습니다.',
-                image: '/images/consalad-responsive.png'
+                hasPageTabs: true,
+                phoneSize: true,
+                pages: [
+                  {
+                    name: 'MAIN',
+                    description: '',
+                    image: '/images/consalad-main-responsive.png'
+                  },
+                  {
+                    name: 'ABOUT',
+                    description: '',
+                    image: '/images/consalad-about-responsive.png'
+                  },
+                  {
+                    name: 'CULTURE',
+                    description: '',
+                    image: '/images/consalad-culture-responsive.png'
+                  },
+                  {
+                    name: 'GAME',
+                    description: '',
+                    image: '/images/consalad-game-responsive.png'
+                  },
+                  {
+                    name: 'CAREERS',
+                    description: '',
+                    image: '/images/consalad-careers-responsive.png'
+                  },
+                  {
+                    name: 'CONTACT',
+                    description: '',
+                    image: '/images/consalad-contact-responsive.png'
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        screenshots: []
+      }
+    },
+    {
+      id: 6,
+      title: 'FastCorp 단식 앱',
+      category: 'App Design',
+      description: '건강한 단식 습관 형성을 돕는 앱 서비스의 기획과 전체 UX/UI디자인을 담당했습니다.',
+      image: '/images/Project6-thumbnail.png',
+      detailImage: '/images/Project6-detail.png',
+      tags: ['기획', 'UX/UI 디자인'],
+      details: {
+        role: ['기획', 'UX/UI 디자인'],
+        period: '2023.04 (약 2주)',
+        tools: [
+          { name: 'Figma', icon: '/icons/figma.png', description: 'Figma\nUI/UX 화면 설계 및 프로토타이핑에 활용' }
+        ],
+        sections: [
+          {
+            title: '주요 화면 구성',
+            contribution: '기획 80% · UX설계 100% · UI에셋 제작(아이콘,3D 에셋 제외) 100%',
+            sectionDescription: ' 아이콘: 상업용 라이선스 구매 에셋 사용, 3D 에셋: 무료 라이선스 에셋 활용',
+            features: [
+              {
+                title: '스플래쉬 및 시작 화면',
+                description: '단식을 접시와 시계의 시침 모티브로 시각화하여 앱의 핵심 콘셉트를 직관적으로 전달',
+                image: '/images/Fastcorp-ui-01.png'
+              },
+              {
+                title: '정보 입력 화면',
+                description: '한 화면에 하나의 정보만 입력하도록 설계하여 흐름을 단순화',
+                image: '/images/Fastcorp-ui-02.png'
+              },
+              {
+                title: '투데이 화면',
+                description: '목표까지 남은 기간을 게이지로 시각화해 동기 부여 요소 강화. 체중 및 식단을 빠르게 기록할 수 있도록 구성',
+                image: '/images/Fastcorp-ui-03.png'
+              },
+              {
+                title: '단식 화면',
+                description: '현재 단식 시간을 직관적으로 확인 가능하도록 디자인. 응원 메시지를 통해 지속 동기를 제공',
+                image: '/images/Fastcorp-ui-04.png'
+              },
+              {
+                title: '더보기 화면',
+                description: '누적 단식 기록과 체중 변화를 그래프로 시각화하여 성과를 한눈에 확인할 수 있도록 구성',
+                image: '/images/Fastcorp-ui-05.png'
+              }
+            ]
+          }
+        ],
+        screenshots: []
+      }
+    },
+    {
+      id: 7,
+      title: '주거관리 플랫폼',
+      category: 'App/Web Design',
+      description: '외주 프로젝트로 진행된 주거관리 플랫폼 ‘삼인방’의 전체 UX/UI 디자인을 담당했습니다.',
+      image: '/images/Project7-thumbnail.png',
+      detailImage: '/images/Project7-detail.png',
+      tags: ['UX/UI 디자인'],
+      details: {
+        role: ['UX/UI 디자인'],
+        period: '2023.05 (약 2주)',
+        tools: [
+          { name: 'Figma', icon: '/icons/figma.png', description: 'Figma\nUI/UX 화면 설계 및 프로토타이핑에 활용' }
+        ],
+        sections: [
+          {
+            title: '임차인 전용 앱 디자인',
+            contribution: 'UX설계 100% · UI에셋 제작(아이콘, 3D 에셋 제외) 90%',
+            sectionDescription: '아이콘: 상업용 라이선스 구매 에셋 사용, 3D 에셋: 무료 라이선스 에셋 활용\n개발 환경에서 Ant Design을 사용하고 있어, Toast 및 Dropdown 등의 컴포넌트는 해당 시스템을 일부 적용',
+            features: [
+              {
+                title: '계약 정보 화면',
+                description: '계약과 주거 정보를 카드형 구조로 시각화하여, 핵심 항목을 한눈에 파악할 수 있도록 정보 위계를 명확히 구성',
+                image: '/images/3inbang-ui-01.png'
+              },
+              {
+                title: '민원 관리',
+                description: '민원 접수 과정을 단계형으로 설계하고 채팅 기능을 통해 문제를 빠르게 해결할 수 있도록 설계',
+                image: '/images/3inbang-ui-02.png'
+              },
+              {
+                title: '공지사항 및 더보기',
+                description: '공지사항을 별도의 탭으로 구분하여 쉽게 확인 가능하도록 설계',
+                image: '/images/3inbang-ui-03.png'
+              }
+            ]
+          },
+          {
+            title: '임대인 전용 웹 디자인',
+            contribution: 'UX설계 100% · UI에셋 제작(아이콘, 3D 에셋 제외) 90%',
+            sectionDescription: '아이콘: 상업용 라이선스 구매 에셋 사용, 3D 에셋: 무료 라이선스 에셋 활용\n개발 환경에서 Ant Design을 사용하고 있어, Toast 및 Dropdown 등의 컴포넌트는 해당 시스템을 일부 적용.',
+            features: [
+              {
+                title: '건물 관리 화면',
+                description: '임대 현황 및 수익 정보를 상단에 배치하여 핵심 지표를 한눈에 파악할 수 있도록 설계',
+                image: '/images/3inbang-ui-04.png'
+              },
+              {
+                title: '일정 관리 화면',
+                description: '계약 만기일 및 퇴실 예정일을 색상으로 구분해 캘린더에서 직관적으로 확인이 가능하도록 설계',
+                image: '/images/3inbang-ui-05.png'
+              },
+              {
+                title: '민원 관리 화면',
+                description: '다수의 민원을 한 화면에서 우선순위별로 확인할 수 있도록 설계. 처리 상태를 명확히 구분하여 잔여 업무를 효율적으로 관리 가능',
+                image: '/images/3inbang-ui-06.png'
               }
             ]
           }
@@ -417,7 +563,6 @@ function Portfolio() {
               {
                 title: '마케팅 이미지',
                 description: '앱스토어 및 광고 소재로 활용된 마케팅 이미지입니다.',
-                productionPeriod: '제작 기간 입력',
                 marketingImages: [
                   '/images/judi-marketing-1.png',
                   '/images/judi-marketing-2.png',
@@ -444,7 +589,6 @@ function Portfolio() {
               {
                 title: '마케팅 이미지',
                 description: '앱스토어 및 광고 소재로 활용된 마케팅 이미지입니다.',
-                productionPeriod: '제작 기간 입력',
                 marketingImages: [
                   '/images/myjudi-marketing-1.png',
                   '/images/myjudi-marketing-2.png',
@@ -469,7 +613,6 @@ function Portfolio() {
               {
                 title: '마케팅 이미지',
                 description: '앱스토어 및 광고 소재로 활용된 마케팅 이미지입니다.',
-                productionPeriod: '제작 기간 입력',
                 marketingImages: [
                '/images/mallang-marketing-1.png',
                '/images/mallang-marketing-2.png',
@@ -491,7 +634,7 @@ function Portfolio() {
   const filteredProjects = projects.filter((project) => {
     if (activeTab === 'All') return true
     if (activeTab === 'Mobile Game') return project.category === 'Mobile Game'
-    if (activeTab === 'Web Design') return project.category === 'Web Design'
+    if (activeTab === 'App/Web') return ['App Design', 'Web Design', 'App/Web Design'].includes(project.category)
     if (activeTab === 'Video Production') return project.category === 'Video Production'
     return true
   })
@@ -530,7 +673,7 @@ function Portfolio() {
         
         {/* 탭 네비게이션 */}
         <div className="portfolio-tabs">
-          {['All', 'Mobile Game', 'Web Design', 'Video Production'].map((tab) => (
+          {['All', 'Mobile Game', 'App/Web', 'Video Production'].map((tab) => (
             <button
               key={tab}
               className={`portfolio-tab ${activeTab === tab ? 'active' : ''}`}
@@ -726,6 +869,9 @@ function Portfolio() {
                               )}
                             </div>
                           )}
+                          {section.sectionDescription && (
+                            <p className="section-description">{section.sectionDescription}</p>
+                          )}
                         </div>
 
                         {section.features.map((feature, index) => (
@@ -800,15 +946,6 @@ function Portfolio() {
                                   })}
                                 </div>
                                 
-                                {/* 캡션을 탭 바로 아래에 표시 (같은 배경 박스 안) */}
-                                {feature.pages.map((page, pageIndex) => {
-                                  const tabKey = `${selectedProject.id}-${index}-${pageIndex}`;
-                                  const isActive = activePageTab[tabKey] !== undefined ? activePageTab[tabKey] : pageIndex === 0;
-                                  
-                                  return isActive && page.description ? (
-                                    <p key={pageIndex} className="page-description">{page.description}</p>
-                                  ) : null;
-                                })}
                               </div>
                               
                               <div className="page-tabs-content">
@@ -819,12 +956,25 @@ function Portfolio() {
                                   return isActive ? (
                                     <div key={pageIndex} className="page-tab-panel">
                                       {page.image ? (
-                                        <img 
-                                          src={page.image} 
-                                          alt={`${feature.title} - ${page.name}`}
-                                          className="page-image clickable-image"
-                                          onClick={() => setExpandedImage(page.image)}
-                                        />
+                                        feature.phoneSize ? (
+                                          <div className="page-image-phone-wrap">
+                                            <div className="page-image-phone">
+                                              <img
+                                                src={page.image}
+                                                alt={`${feature.title} - ${page.name}`}
+                                                onClick={() => setExpandedImage(page.image)}
+                                              />
+                                            </div>
+                                          </div>
+                                        ) : (
+                                        <div className="page-image-preview">
+                                          <img 
+                                            src={page.image} 
+                                            alt={`${feature.title} - ${page.name}`}
+                                            onClick={() => setExpandedImage(page.image)}
+                                          />
+                                        </div>
+                                        )
                                       ) : (
                                         <div className="image-placeholder-portfolio">
                                           <svg viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -840,6 +990,9 @@ function Portfolio() {
                                             </defs>
                                           </svg>
                                         </div>
+                                      ) }
+                                      {page.description && (
+                                        <p className="page-description">{page.description}</p>
                                       )}
                                     </div>
                                   ) : null;
@@ -931,6 +1084,25 @@ function Portfolio() {
                             ) : null
                           )}
                           
+                          {/* 설명 포함 이미지 (captionedImages) */}
+                          {feature.captionedImages && (
+                            <div className="captioned-images-list">
+                              {feature.captionedImages.map((item, idx) => (
+                                <div key={idx} className="captioned-image-item">
+                                  <img
+                                    src={item.image}
+                                    alt={`화면 ${idx + 1}`}
+                                    className="captioned-image-img"
+                                    onClick={() => setExpandedImage(item.image)}
+                                  />
+                                  {item.caption && (
+                                    <p className="captioned-image-caption">{item.caption}</p>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
                           {/* 마케팅 이미지 그리드 */}
                           {feature.marketingImages && feature.marketingImages.some(img => img !== null) && (
                             <div className="marketing-images-section">
@@ -939,7 +1111,7 @@ function Portfolio() {
                                   {feature.productionPeriod}
                                 </div>
                               )}
-                              <div className="marketing-images-grid">
+                              <div className={`marketing-images-grid${feature.singleColumn ? ' marketing-images-single' : ''}`}>
                                 {feature.marketingImages.map((img, imgIndex) => (
                                   img ? (
                                     <div key={imgIndex} className="marketing-image-item">
