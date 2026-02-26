@@ -175,7 +175,7 @@
 /* UA 모달: X 버튼·스크롤바를 이미지(콘텐츠) 안쪽에 */
 .modal-content.modal-color-sections .modal-close {
   top: 0.75rem;
-  right: 1.5rem;
+  right: 2rem;
 }
 
 /* UA 모달: 스크롤바와 이미지 간격 없음, 스크롤바 스타일(트랙 흰색/썸 보라 그라데이션) */
