@@ -47,13 +47,13 @@ export const uaColorSections = [
           bottom: '20%', left: '12.57%', width: '74.86%'
         }
       },
-      { image: '/images/marketing_myjoody.png' },
     ]
   },
   {
     title: '마이주디',
     bgColor: '#FFE8E8',
     content: [
+      { image: '/images/marketing_myjoody.png' },
       {
         videoInFrame: {
           frameSrc: '/images/myjoody_video1.png',

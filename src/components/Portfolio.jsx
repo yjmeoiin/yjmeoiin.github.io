@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { uaColorSections } from '../data/uaColorSections'
+import UaSections from './UaSections'
 import './Portfolio.css'
 
 function Portfolio() {
@@ -443,120 +444,8 @@ function Portfolio() {
           <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
             <div className="modal-content modal-color-sections" onClick={(e) => e.stopPropagation()}>
               <button className="modal-close" onClick={() => setSelectedProject(null)}>✕</button>
-              <a href="#/ua" className="modal-ua-standalone-link" target="_blank" rel="noopener noreferrer">이 페이지만 보기 ↗</a>
               <div className="modal-body">
-                {selectedProject.colorSections.map((section, i) => (
-                  <div
-                    key={i}
-                    className="color-section"
-                    style={{ backgroundColor: section.bgColor }}
-                  >
-                    {section.content && section.content.map((item, j) => (
-                      <div key={j}>
-                        {item.imageInFrame && (
-                          <div className="video-in-frame-container">
-                            <img src={item.imageInFrame.frameSrc} className="video-in-frame-bg" alt="frame" />
-                            <img
-                              src={item.imageInFrame.overlaySrc}
-                              alt="overlay"
-                              className="clickable-image"
-                              style={{
-                                position: 'absolute',
-                                bottom: item.imageInFrame.bottom,
-                                left: item.imageInFrame.left,
-                                width: item.imageInFrame.width,
-                                height: 'auto',
-                                cursor: 'pointer',
-                              }}
-                              onClick={() => setExpandedImage(item.imageInFrame.overlaySrc)}
-                            />
-                          </div>
-                        )}
-                        {item.videoInFrame && (
-                          <div className="video-in-frame-container">
-                            <img src={item.videoInFrame.frameSrc} className="video-in-frame-bg" alt="frame" />
-                            <div
-                              className={`video-in-frame-wrapper${item.videoInFrame.videoSrcs ? ' video-in-frame-wrapper--multi' : ''}`}
-                              style={{
-                                position: 'absolute',
-                                top: item.videoInFrame.top,
-                                bottom: item.videoInFrame.bottom,
-                                left: item.videoInFrame.left,
-                                right: item.videoInFrame.right,
-                              }}
-                            >
-                              {item.videoInFrame.videoSrcs ? (
-                                item.videoInFrame.videoSrcs.map((src, vi) => (
-                                  <video key={vi} controls className="video-in-frame-video">
-                                    <source src={src} type="video/mp4" />
-                                  </video>
-                                ))
-                              ) : (
-                                <video controls className="video-in-frame-video">
-                                  <source src={item.videoInFrame.videoSrc} type="video/mp4" />
-                                </video>
-                              )}
-                            </div>
-                          </div>
-                        )}
-                        {item.image && (
-                          <img
-                            src={item.image}
-                            alt={`${section.title} ${j + 1}`}
-                            className="color-section-image"
-                          />
-                        )}
-                        {item.videos && (
-                          <div className="feature-videos-container">
-                            {item.videos.map((v, vi) => (
-                              <div key={vi} className="video-with-caption">
-                                <video controls className="feature-video">
-                                  <source src={v.src} type="video/mp4" />
-                                </video>
-                                {v.caption && <div className="video-caption">{renderCaptionBadges(v.caption)}</div>}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {item.videosVertical && (
-                          <div className="feature-videos-container">
-                            {item.videosVertical.map((v, vi) => (
-                              <div key={vi} className="video-with-caption">
-                                <video controls className="feature-video">
-                                  <source src={v.src} type="video/mp4" />
-                                </video>
-                                {v.caption && <div className="video-caption">{renderCaptionBadges(v.caption)}</div>}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {item.videosHorizontal && (
-                          <div className="feature-videos-horizontal-container">
-                            {item.videosHorizontal.map((v, vi) => (
-                              <div key={vi} className="feature-video-horizontal-wrapper">
-                                <div className="feature-video-horizontal-item">
-                                  <video controls className="feature-video">
-                                    <source src={v.src} type="video/mp4" />
-                                  </video>
-                                </div>
-                                {v.caption && <div className="video-caption">{renderCaptionBadges(v.caption)}</div>}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {item.marketingImages && (
-                          <div className="marketing-images-grid">
-                            {item.marketingImages.map((img, mi) => (
-                              <div key={mi} className="marketing-image-item">
-                                <img src={img} alt={`marketing ${mi + 1}`} className="clickable-image" onClick={() => setExpandedImage(img)} />
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ))}
+                <UaSections colorSections={selectedProject.colorSections} />
               </div>
             </div>
           </div>

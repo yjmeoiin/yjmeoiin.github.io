@@ -10,9 +10,10 @@ export default function UaSections({ colorSections }) {
         {colorSections.map((section, i) => (
           <div
             key={i}
-            className="color-section"
+            className="color-section ua-section-full-bg"
             style={{ backgroundColor: section.bgColor }}
           >
+            <div className="color-section-inner">
             {section.content && section.content.map((item, j) => (
               <div key={j}>
                 {item.imageInFrame && (
@@ -70,6 +71,7 @@ export default function UaSections({ colorSections }) {
                 )}
               </div>
             ))}
+            </div>
           </div>
         ))}
       </div>
