@@ -182,14 +182,10 @@
   .menu-toggle span {
     width: 20px;
     height: 2px;
-  }
-
-  .logo a {
+  }  .logo a {
     font-size: 0.95rem;
     gap: 0.4rem;
-  }
-
-  .logo-icon {
+  }  .logo-icon {
     width: 28px;
     height: 28px;
   }

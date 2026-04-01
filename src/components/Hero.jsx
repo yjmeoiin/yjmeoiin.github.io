@@ -1,13 +1,6 @@
 import './Hero.css'
 
 function Hero() {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section id="hero" className="hero">
       <div className="hero-background">
@@ -29,19 +22,21 @@ function Hero() {
           </p>
           <div className="hero-buttons">
             <a 
-              href="/2026%20여지민%20이력서.pdf"
+              href="/resume.pdf"
               className="btn btn-outline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              이력서 보기
+              이력서 PDF 보기
             </a>
-            <button 
-              className="btn btn-primary"
-              onClick={() => scrollToSection('portfolio')}
+            <a
+              href="/portfolio.pdf"
+              className="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              포트폴리오 보기
-            </button>
+              포트폴리오 PDF 보기
+            </a>
           </div>
         </div>
         
