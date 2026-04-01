@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { uaColorSections } from '../data/uaColorSections'
 import './Portfolio.css'
 
 function Portfolio() {
@@ -71,9 +72,10 @@ function Portfolio() {
       title: '주디: 내가 찍은 도트로 아바타 꾸미기',
       category: 'Mobile Game',
       description: '주디는 귀여운 슬라임과 본인의 아바타를 꾸미고, 직접 아이템을 그리며, 유저들과 소통하는 캐주얼 게임입니다.',
-      image: '/images/Project1-thumbnail.png', // 카드용 썸네일 이미지
-      detailImage: '/images/Project1-detail.png', // 상세 페이지 최상단 이미지 (따로 등록 가능)
+      image: '/images/Project1-thumbnail.png',
+      detailImage: '/images/Project1-detail.png',
       tags: ['상세 기획', 'UI/UX 디자인','앱 등록 이미지 제작'],
+      imageOnly: true,
       // 상세 정보
       details: {
         role: ['상세 기획', 'UI/UX 디자인','앱 등록 이미지 제작'],
@@ -82,85 +84,19 @@ function Portfolio() {
           { name: 'Aseprite', icon: '/icons/aseprite.png', description: 'Aseprite\n픽셀 아트 에셋 제작에 활용' },
           { name: 'Figma', icon: '/icons/figma.png', description: 'Figma\nUI/UX 화면 설계 및 프로토타이핑에 활용' }
         ],
-        overview: '사용자 친화적이고 직관적인 게임 UI/UX를 설계하고 디자인한 프로젝트입니다. 게임의 전체적인 UI 시스템부터 세부 인터랙션까지 담당했습니다.',
         sections: [
           {
-            title: '세레나 콜라보 기획·디자인',
-            period: '2025.07 (약 2.5주)',
-            contribution: '기획 95% · UX설계 100% · UI에셋 제작 100%',
-            features: [
-          {
-            title: '광장맵 재구성',
-            description: '기존 광장 에셋들을 활용하여 유저의 동선과 행동들을 고려해 광장맵 재구성을 진행했습니다.\n유니티를 활용해 타일맵 배치하여 개발팀에 전달했습니다.',
-            image: '/images/plaza-before.png',
-            hoverImage: '/images/plaza-after.png'
-          },
-          {
-            title: '배달 미션 & 탈것 시스템',
-            description: '다친 모카를 도와 광장 NPC들에게 카페 배달을 해주는 미션으로 광장 콘텐츠를 보강했습니다.\n배달을 효율적으로 돕는 탈것을 유료 콘텐츠로 설계해 BM을 개선하고, 등급별 속도 차이로 희소성과 소장 가치를 더했습니다.',
-            image: '/images/delivery-mission.png'
-          },
-          {
-            title: '이벤트 포토존 & 미션',
-            description: '재사용 가능한 포토존을 추가했고, 미어캣 촬영을 통해 NPC들의 특별한 포즈를 담을 수 있게 했습니다.\n콜라보 NPC와의 청소 미션으로 저택 탐색 재미를 더해 이벤트 참여도를 높였습니다.',
-            image: '/images/event-photozone.png'
-          }
-            ]
-          },
-          {
-            title: '길드 콘텐츠',
-            period: '2024.06 (약 2주)',
-            contribution: 'UX설계 100% · UI에셋 제작 100%',
+            title: '',
             features: [
               {
-                title: '길드 운영',
-                description: '길드 결성부터 길드원 관리까지 직관적인 UI로 쉽게 길드를 운영할 수 있도록 디자인했습니다',
-                image: '/images/guild-management.png'
-              },
-              {
-                title: '길드 나무 성장 & 꾸미기',
-                description: '화면 하단에 아이템을 배치하여 쉽게 나무를 가꿀 수 있게 하였고,\n아이템이 없을 경우 자연스럽게 상점으로 이어지도록 설계했습니다.',
-                image: '/images/guild-tree.png'
-              }
-            ]
-          },
-          {
-            title: 'VIP 콘텐츠',
-            period: '2023.09 (약 1주)',
-            contribution: '기획 20% · UX설계 100% · UI에셋 제작 100%',
-            features: [
-              {
-                title: 'VIP 전용 기능',
-                description: '상품 구매 시 추가로 이용할 수 있는 콘텐츠의 상세 기획을 진행하고, 디자인에 반영했습니다.',
-                image: '/images/vip-feature.png'
-              }
-            ]
-          },
-          {
-            title: '앱 등록 이미지',
-            period: '2024.07 (약 1일)',
-            contribution: '기획 및 디자인 100%',
-            features: [
-              {
-                title: '프리뷰 이미지',
-                description: '앱스토어와 구글 플레이에 등록된 프리뷰 이미지입니다.',
-                image: '/images/judi-preview.png'
+                title: '',
+                description: '',
+                image: '/images/joody.png'
               }
             ]
           }
         ],
-        uiAssets: [
-          {
-            title: 'UI에셋',
-            description: '주디의 UI에셋은 따듯한 우드톤을 활용해 힐링게임의 분위기가 느껴지도록 디자인 했습니다.',
-            image: '/images/ui-asset.png'
-          },
-          {
-            title: '게임 아이콘',
-            description: '아이콘은 파스텔톤을 사용하고 픽셀이지만 직관적으로 인지할 수 있도록 섬세하게 제작했습니다.',
-            image: '/images/ui-asset-1.png'
-          }
-        ],
+        uiAssets: [],
         screenshots: []
       }
     },
@@ -169,9 +105,10 @@ function Portfolio() {
       title: '마이주디 : 나만의 코디샵',
       category: 'Mobile Game',
       description: '주디의 개선 버전으로 출시된 슬라임 육성 게임입니다.\n귀여운 슬라임을 키우고 꾸미며, 직접 아이템을 그려 나만의 창작물을 만들 수 있습니다.',
-      image: '/images/Project3-thumbnail.png', // 카드용 썸네일 이미지
-      detailImage: '/images/Project3-detail.png', // 상세 페이지 최상단 이미지 (따로 등록 가능)
+      image: '/images/Project3-thumbnail.png',
+      detailImage: '/images/Project3-detail.png',
       tags: ['상세 기획', 'UX/UI 디자인', '앱 등록 이미지 제작'],
+      imageOnly: true,
       details: {
         role: ['상세 기획', 'UX/UI 디자인', '앱 등록 이미지 제작'],
         period: '2024.09 ~ 2025.05',
@@ -182,67 +119,17 @@ function Portfolio() {
         ],
         sections: [
           {
-            title: '기능 개선 & 콘텐츠 추가',
-            period: '2025.04 ~ 2025.05 (약 1개월)',
-            contribution: '기획 40% · UX설계 90% · UI에셋 제작 90%',
+            title: '',
             features: [
               {
-                title: '슬라임 육성',
-                description: '출생신고서 작성을 통해 슬라임에 대한 유저의 애착을 형성하고,\n메인 화면에서 실시간 상태 확인과 돌보기가 가능하도록 구성했습니다.',
-                image: '/images/myjudy-slime.png'
-              },
-              {
-                title: '꾸미기 콘텐츠',
-                description: '핵심 기능인 꾸미기를 누구나 쉽고 편리하게 이용할 수 있도록, \n한 화면 안에서 슬라임 의상·방·섬을 모두 꾸밀 수 있게 구성했습니다.',
-                image: '/images/myjudy-deco.png'
-              },
-              {
-                title: '수집 콘텐츠',
-                description: '유저가 아이템을 쉽게 기증할 수 있도록 다중 제출 모드를 기획해 추가했고,\n기증 단계에 따라 성취감을 느낄 수 있도록 점점 컬렉션이 완성되는 모습을 시각적으로 표현했습니다.',
-                image: '/images/myjudy-collection.png'
-              },
-              {
-                title: '소통 콘텐츠',
-                description: '광장은 다양한 행동이 이루어지는 공간이기 때문에, 사용자 시야를 방해하지 않는 선에서 \n채팅 UI를 하단에 배치해 소통 흐름을 유지할 수 있게 구성했습니다.',
-                image: '/images/myjudy-communication.png'
-              },
-              {
-                title: '자랑 콘텐츠',
-                description: '코디북은 SNS 플랫폼 형태로 구성해, 유저가 익숙한 경험 안에서 \n내 슬라임 코디를 쉽게 등록하고 공유할 수 있도록 구성했습니다.',
-                image: '/images/myjudy-show-off.png'
-              }
-            ]
-          },
-          {
-            title: '앱 등록 이미지',
-            period: '2025.05 (약 2일)',
-            contribution: '기획 및 디자인 100%',
-            features: [
-              {
-                title: '프리뷰 이미지',
-                description: '앱스토어와 구글 플레이에 등록된 프리뷰 이미지입니다.',
-                image: '/images/myjudy-preview.png'
+                title: '',
+                description: '',
+                image: '/images/myjoody.png'
               }
             ]
           }
         ],
-        uiAssets: [
-          {
-            title: '게임 아이콘',
-            description: '마이주디의 아이콘은 벡터 스타일로 제작했으며,\n부드러운 곡선과 파스텔 톤을 사용해 친근하고 귀여운 느낌으로 디자인했습니다.',
-            image: '/images/myjudy-ui-asset-1.png'
-          },
-          {
-            title: '게임 에셋',
-            description: '낚시 플레이의 몰입감을 높이기 위해, 낚시 시작과 물고기 획득 모션 스프라이트를 제작하고,\n게임 화면의 분위기에 맞는 백그라운드 패턴을 디자인했습니다.',
-            image: '/images/myjudy-ui-asset.png',
-            gifs: [
-              '/images/myjudy-asset-gif1.gif',
-              '/images/myjudy-asset-gif2.gif',
-              '/images/myjudy-asset-gif3.gif'
-            ]
-          }
-        ],
+        uiAssets: [],
         screenshots: []
       }
     },
@@ -251,9 +138,10 @@ function Portfolio() {
       title: '말랑 메이커 : 슬라임 교배 마스터',
       category: 'Mobile Game',
       description: '말랑메이커는 슬라임을 돌보고 교배·합성하여 전설의 마법사로 성장하는 게임입니다.',
-      image: '/images/Project2-thumbnail.png', // 카드용 썸네일 이미지
-      detailImage: '/images/Project2-detail.png', // 상세 페이지 최상단 이미지 (따로 등록 가능)
+      image: '/images/Project2-thumbnail.png',
+      detailImage: '/images/Project2-detail.png',
       tags: ['UX/UI 디자인', '앱 등록 이미지 제작'],
+      imageOnly: true,
       details: {
         role: ['UX/UI 디자인', '앱 등록 이미지 제작'],
         period: '2024.02 ~ 2024.06',
@@ -263,52 +151,17 @@ function Portfolio() {
         ],
         sections: [
           {
-            title: '주요 화면 구성',
-            period: '2024.02 ~ 2024.04',
-            contribution: 'UX설계 100% · UI에셋 제작 100%',
+            title: '',
             features: [
               {
-                title: '슬라임 부화 & 육성',
-                description: '부화 가능한 알 위에 TAP 텍스트와 흔들리는 알 모션을 추가해 클릭을 유도했습니다. \n슬라임 상태에 대한 힌트를 주어 원하는 돌보기 진행 시 높은 점수를 얻을 수 있도록 돌보기에 대한 재미도 추가했습니다.',
-                image: '/images/mallang-breeding.png'
-              },
-              {
-                title: '슬라임 대결',
-                description: '상대의 파츠 레벨과 비교해 더 높은 슬라임을 선택하는 것이 유리하기 때문에,\n상대의 점수와 쉽게 비교할 수 있도록 구성했습니다.',
-                image: '/images/mallang-battle.png'
-              },
-              {
-                title: '기타 게임 화면',
-                description: '게임 내 화면들은 일관된 디자인 시스템을 기반으로 구성해 전체 흐름과 사용 경험의 통일감을 유지했습니다.',
-                image: '/images/mallang-fusion.png'
-              }
-            ]
-          },
-          {
-            title: '앱 등록 이미지',
-            period: '2024.04 (약 2일)',
-            contribution: '기획 및 디자인 100%',
-            features: [
-              {
-                title: '프리뷰 이미지',
-                description: '앱스토어와 구글 플레이에 등록된 프리뷰 이미지입니다.',
-                image: '/images/mallang-preview.png'
+                title: '',
+                description: '',
+                image: '/images/mallang.png'
               }
             ]
           }
         ],
-        uiAssets: [
-          {
-            title: 'UI에셋',
-            description: '말랑메이커의 UI는 아트와 톤을 구분해 레드 톤의 우드와 종이 질감으로 \n마법 세계의 따뜻하고 고전적인 느낌을 표현했습니다. ',
-            image: '/images/mallang-ui-asset.png'
-          },
-          {
-            title: '게임 아이콘',
-            description: '아이콘은 단순한 형태로 디자인하여 가독성을 높였고, 우드 톤과 조화를 이루도록 제작했습니다.',
-            image: '/images/mallang-ui-asset-1.png'
-          }
-        ],
+        uiAssets: [],
         screenshots: []
       }
     },
@@ -317,9 +170,10 @@ function Portfolio() {
       title: '컨샐러드 홈페이지',
       category: 'Web Design',
       description: '사용자 경험을 고려한 반응형 웹사이트를 기획·디자인했습니다.',
-      image: '/images/Project4-thumbnail.png', // 카드용 썸네일 이미지
-      detailImage: '/images/Project4-detail.png', // 상세 페이지 최상단 이미지 (따로 등록 가능)
+      image: '/images/Project4-thumbnail.png',
+      detailImage: '/images/Project4-detail.png',
       tags: ['홈페이지 기획', 'UX/UI 디자인'],
+      imageOnly: true,
       details: {
         role: ['홈페이지 기획', 'UX/UI 디자인'],
         period: '2023.11 (약 8일)',
@@ -329,83 +183,12 @@ function Portfolio() {
         ],
         sections: [
           {
-            title: '웹페이지 기획 및 디자인',
-            contribution: '기획 100% · UX설계 100% · UI에셋 제작 100%',
+            title: '',
             features: [
               {
-                title: '웹페이지 디자인',
-                description: '아래 탭을 클릭해 각 페이지 화면을 확인할 수 있습니다.',
-                hasPageTabs: true,
-                pages: [
-                  {
-                    name: 'MAIN',
-                    description: '메인 페이지는 각 세부 페이지의 핵심 정보를 한눈에 파악할 수 있도록 배치하고, \n바로 이동하기 버튼을 통해 필요 시 상세 페이지로 이동할 수 있도록 구성했습니다.',
-                    image: '/images/consalad-main.png'
-                  },
-                  {
-                    name: 'ABOUT',
-                    description: 'About 페이지에는 컨샐러드의 비전과 가치를 담았으며, \n스크롤에 따라 자연스러운 UI연출을 적용하여 지루하지 않게 읽히도록 구성했습니다.',
-                    image: '/images/consalad-about.png'
-                  },
-                  {
-                    name: 'CULTURE',
-                    description: '컨샐러드의 문화와 복지를 소개하는 페이지로, \n적절한 아이콘을 사용해 직관적으로 정보를 전달할 수 있게 구성했습니다.',
-                    image: '/images/consalad-culture.png'
-                  },
-                  {
-                    name: 'GAME',
-                    description: '상단에 캐릭터를 배치해 각 캐릭터의 귀여운 소개를 자연스럽게 확인할 수 있도록 했으며, \n그 아래에는 주디 게임의 핵심 기능을 정리해 소개하고 바로 다운로드로 연결될 수 있도록 구성했습니다.',
-                    image: '/images/consalad-game.png'
-                  },
-                  {
-                    name: 'CAREERS',
-                    description: '홈페이지 내에서 공고를 확인하고 바로 지원이 가능하도록 설계했으며, \n채용 평가 방식과 회사에 대한 정보도 함께 제공했습니다.',
-                    image: '/images/consalad-careers.png'
-                  },
-                  {
-                    name: 'CONTACT',
-                    description: '컨샐러드의 협력사를 간단히 소개하고, 협력을 희망하는 경우 \n바로 문의할 수 있도록 이메일 정보를 함께 제공했습니다.',
-                    image: '/images/consalad-contact.png'
-                  }
-                ]
-              },
-              {
-                title: '반응형 디자인',
-                description: '데스크톱, 태블릿, 모바일 등 다양한 디바이스에 최적화된 반응형 디자인을 구현했습니다.',
-                hasPageTabs: true,
-                phoneSize: true,
-                pages: [
-                  {
-                    name: 'MAIN',
-                    description: '',
-                    image: '/images/consalad-main-responsive.png'
-                  },
-                  {
-                    name: 'ABOUT',
-                    description: '',
-                    image: '/images/consalad-about-responsive.png'
-                  },
-                  {
-                    name: 'CULTURE',
-                    description: '',
-                    image: '/images/consalad-culture-responsive.png'
-                  },
-                  {
-                    name: 'GAME',
-                    description: '',
-                    image: '/images/consalad-game-responsive.png'
-                  },
-                  {
-                    name: 'CAREERS',
-                    description: '',
-                    image: '/images/consalad-careers-responsive.png'
-                  },
-                  {
-                    name: 'CONTACT',
-                    description: '',
-                    image: '/images/consalad-contact-responsive.png'
-                  }
-                ]
+                title: '',
+                description: '',
+                image: '/images/consalad.png'
               }
             ]
           }
@@ -413,6 +196,7 @@ function Portfolio() {
         screenshots: []
       }
     },
+    /* 주석처리 - FastCorp 단식 앱
     {
       id: 6,
       title: 'FastCorp 단식 앱',
@@ -464,6 +248,8 @@ function Portfolio() {
         screenshots: []
       }
     },
+    */
+    /* 주석처리 - 주거관리 플랫폼
     {
       id: 7,
       title: '주거관리 플랫폼',
@@ -527,104 +313,16 @@ function Portfolio() {
         screenshots: []
       }
     },
+    */
     {
       id: 5,
       title: 'UA영상 모음',
       category: 'Video Production',
       description: '다양한 게임의 유저 획득을 위한 광고 영상과 마케팅 소재를 제작한 포트폴리오입니다.',
-      image: '/images/Project5-thumbnail.png', // 카드용 썸네일 이미지
-      detailImage: '/images/Project5-detail.png', // 상세 페이지 최상단 이미지 (따로 등록 가능)
+      image: '/images/Project5-thumbnail.png',
+      detailImage: '/images/Project5-detail.png',
       tags: ['UA 영상 제작', '마케팅 이미지 제작'],
-      details: {
-        role: ['UA 영상 제작', '마케팅 이미지 제작'],
-        period: '2023.03 ~ 2025.07',
-        tools: [
-          { name: 'After Effect', icon: '/icons/after-effect.png', description: 'After Effect\nUA 영상 제작에 활용' },
-          { name: 'Photoshop', icon: '/icons/photoshop.png', description: 'Photoshop\n아이콘 제작 및 이미지 편집에 활용' },
-          { name: 'Aseprite', icon: '/icons/aseprite.png', description: 'Aseprite\n픽셀 아트 에셋 제작에 활용' }
-        ],
-        sections: [
-          {
-            title: '주디 - 귀여운 슬라임 키우기',
-            features: [
-              {
-                title: 'UA 영상',
-                description: '10~20대 여성 타겟의 관심사인 브이로그와 귀여움을 바탕으로, 가벼운 개그 요소를 더한 슬라임 브이로그 콘셉트 영상을 기획·제작했습니다.',
-                videosVertical: [
-                  { src: '/videos/judi-ua.mp4', caption: '23.03 | 제작 기간 7일\n영상 기획 100% · 영상 편집 100% · 에셋 제작 95%' },
-                  { src: '/videos/judi-ua-2.mp4', caption: '23.10 | 제작 기간 5일\n영상 기획 100% · 영상 편집 100% · 에셋 제작 95%' }
-                ],
-                videosHorizontal: [
-                  { src: '/videos/judi-ua-3.mp4', caption: '24.01 | 제작 기간 1일\n영상 기획 100% · 영상 편집 100% · 에셋 제작 30%' },
-                  { src: '/videos/judi-ua-4.mp4', caption: '24.07 | 제작 기간 3일\n영상 기획 100% · 영상 편집 100% · 에셋 제작 60%' },
-                  { src: '/videos/judi-ua-5.mp4', caption: '25.06 | 제작 기간 2일\n영상 기획 100% · 영상 편집 100%' }
-                ]
-              },
-              {
-                title: '마케팅 이미지',
-                description: '앱스토어 및 광고 소재로 활용된 마케팅 이미지입니다.',
-                marketingImages: [
-                  '/images/judi-marketing-1.png',
-                  '/images/judi-marketing-2.png',
-                  '/images/judi-marketing-3.png',
-                  '/images/judi-marketing-4.png',
-                  '/images/judi-marketing-5.png',
-                  '/images/judi-marketing-6.png',
-                  '/images/judi-marketing-7.png',
-                  '/images/judi-marketing-8.png'
-                ]
-              }
-            ]
-          },
-          {
-            title: '마이주디 : 나만의 코디샵',
-            features: [
-              {
-                title: 'UA 영상',
-                description: '주디의 후속작으로, 업그레이드된 콘텐츠와 새로운 재미 요소를 소개하는 영상을 제작했습니다.\n기존 유저와 신규 유저 모두에게 어필할 수 있도록 구성했습니다.',
-                videos: [
-                  { src: '/videos/myjoody-ua.mp4', caption: '25.02 | 제작 기간 4일\n영상 기획 100% · 영상 편집 100% · 에셋 제작 40%' }
-                ]
-              },
-              {
-                title: '마케팅 이미지',
-                description: '앱스토어 및 광고 소재로 활용된 마케팅 이미지입니다.',
-                marketingImages: [
-                  '/images/myjudi-marketing-1.png',
-                  '/images/myjudi-marketing-2.png',
-                  '/images/myjudi-marketing-3.png',
-                  '/images/myjudi-marketing-4.png'
-                ]
-              }
-            ]
-          },
-          {
-            title: '말랑 메이커 : 슬라임 교배 마스터',
-            features: [
-              {
-                title: 'UA 영상',
-                description: '슬라임 교배와 합성 시스템을 중심으로 게임의 독특한 특징을 부각시킨 영상을 제작했습니다.\n전략적 육성 요소를 강조하여 코어 게이머를 타겟팅했습니다.',
-                videos: [
-                  { src: '/videos/mallang-ua-1.mp4', caption: '24.03 | 제작 기간 3일\n영상 기획 100% · 영상 편집 100%' },
-                  { src: '/videos/mallang-ua-2.mp4', caption: '24.03 | 제작 기간 3일\n영상 기획 100% · 영상 편집 100%' },
-                  { src: '/videos/mallang-ua-3.mp4', caption: '24.06 | 제작 기간 3일\n영상 기획 100% · 영상 편집 100%' }
-                ]
-              },
-              {
-                title: '마케팅 이미지',
-                description: '앱스토어 및 광고 소재로 활용된 마케팅 이미지입니다.',
-                marketingImages: [
-               '/images/mallang-marketing-1.png',
-               '/images/mallang-marketing-2.png',
-               '/images/mallang-marketing-3.png',
-               '/images/mallang-marketing-4.png'
-                ]
-              }
-            ]
-          }
-        ],
-        screenshots: []
-      }
+      colorSections: uaColorSections,
     }
   ]
 
@@ -727,7 +425,144 @@ function Portfolio() {
         </div>
 
         {/* 프로젝트 상세 모달 */}
-        {selectedProject && (
+        {selectedProject && selectedProject.imageOnly && (
+          <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+            <div className="modal-content modal-image-only" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={() => setSelectedProject(null)}>✕</button>
+              <div className="modal-image-only-body">
+                <img
+                  src={selectedProject.details.sections[0].features[0].image}
+                  alt={selectedProject.title}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {selectedProject && selectedProject.colorSections && (
+          <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+            <div className="modal-content modal-color-sections" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={() => setSelectedProject(null)}>✕</button>
+              <a href="#/ua" className="modal-ua-standalone-link" target="_blank" rel="noopener noreferrer">이 페이지만 보기 ↗</a>
+              <div className="modal-body">
+                {selectedProject.colorSections.map((section, i) => (
+                  <div
+                    key={i}
+                    className="color-section"
+                    style={{ backgroundColor: section.bgColor }}
+                  >
+                    {section.content && section.content.map((item, j) => (
+                      <div key={j}>
+                        {item.imageInFrame && (
+                          <div className="video-in-frame-container">
+                            <img src={item.imageInFrame.frameSrc} className="video-in-frame-bg" alt="frame" />
+                            <img
+                              src={item.imageInFrame.overlaySrc}
+                              alt="overlay"
+                              className="clickable-image"
+                              style={{
+                                position: 'absolute',
+                                bottom: item.imageInFrame.bottom,
+                                left: item.imageInFrame.left,
+                                width: item.imageInFrame.width,
+                                height: 'auto',
+                                cursor: 'pointer',
+                              }}
+                              onClick={() => setExpandedImage(item.imageInFrame.overlaySrc)}
+                            />
+                          </div>
+                        )}
+                        {item.videoInFrame && (
+                          <div className="video-in-frame-container">
+                            <img src={item.videoInFrame.frameSrc} className="video-in-frame-bg" alt="frame" />
+                            <div
+                              className={`video-in-frame-wrapper${item.videoInFrame.videoSrcs ? ' video-in-frame-wrapper--multi' : ''}`}
+                              style={{
+                                position: 'absolute',
+                                top: item.videoInFrame.top,
+                                bottom: item.videoInFrame.bottom,
+                                left: item.videoInFrame.left,
+                                right: item.videoInFrame.right,
+                              }}
+                            >
+                              {item.videoInFrame.videoSrcs ? (
+                                item.videoInFrame.videoSrcs.map((src, vi) => (
+                                  <video key={vi} controls className="video-in-frame-video">
+                                    <source src={src} type="video/mp4" />
+                                  </video>
+                                ))
+                              ) : (
+                                <video controls className="video-in-frame-video">
+                                  <source src={item.videoInFrame.videoSrc} type="video/mp4" />
+                                </video>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        {item.image && (
+                          <img
+                            src={item.image}
+                            alt={`${section.title} ${j + 1}`}
+                            className="color-section-image"
+                          />
+                        )}
+                        {item.videos && (
+                          <div className="feature-videos-container">
+                            {item.videos.map((v, vi) => (
+                              <div key={vi} className="video-with-caption">
+                                <video controls className="feature-video">
+                                  <source src={v.src} type="video/mp4" />
+                                </video>
+                                {v.caption && <div className="video-caption">{renderCaptionBadges(v.caption)}</div>}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {item.videosVertical && (
+                          <div className="feature-videos-container">
+                            {item.videosVertical.map((v, vi) => (
+                              <div key={vi} className="video-with-caption">
+                                <video controls className="feature-video">
+                                  <source src={v.src} type="video/mp4" />
+                                </video>
+                                {v.caption && <div className="video-caption">{renderCaptionBadges(v.caption)}</div>}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {item.videosHorizontal && (
+                          <div className="feature-videos-horizontal-container">
+                            {item.videosHorizontal.map((v, vi) => (
+                              <div key={vi} className="feature-video-horizontal-wrapper">
+                                <div className="feature-video-horizontal-item">
+                                  <video controls className="feature-video">
+                                    <source src={v.src} type="video/mp4" />
+                                  </video>
+                                </div>
+                                {v.caption && <div className="video-caption">{renderCaptionBadges(v.caption)}</div>}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {item.marketingImages && (
+                          <div className="marketing-images-grid">
+                            {item.marketingImages.map((img, mi) => (
+                              <div key={mi} className="marketing-image-item">
+                                <img src={img} alt={`marketing ${mi + 1}`} className="clickable-image" onClick={() => setExpandedImage(img)} />
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {selectedProject && !selectedProject.imageOnly && !selectedProject.colorSections && (
           <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <button className="modal-close" onClick={() => setSelectedProject(null)}>
