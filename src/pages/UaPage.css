@@ -1,6 +1,5 @@
 .ua-page {
   min-height: 100vh;
-  background: #fff;
 }
 
 .ua-page-back {
@@ -24,11 +23,21 @@
 }
 
 .ua-page-content {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .ua-page-sections {
+  padding: 0;
+}
+
+/* 섹션별 배경색이 가로 전체를 채우도록 */
+.ua-page-sections .ua-section-full-bg {
+  width: 100%;
+}
+
+.ua-page-sections .color-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 0;
 }
 

@@ -141,13 +141,14 @@
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  padding: 2rem;
+  padding: 2rem 0;
   animation: fadeIn 0.3s ease;
 }
 
+/* 모든 상세 모달 공통: 라운드 28px */
 .modal-content {
   background: var(--color-white);
-  border-radius: 20px;
+  border-radius: 28px;
   max-width: 900px;
   width: 100%;
   max-height: 90vh;
@@ -160,30 +161,57 @@
 
 .modal-content.modal-image-only {
   background: #000;
+  border-radius: 28px;
 }
 
 .modal-content.modal-color-sections {
   background: transparent;
+  overflow: hidden;
+  border-radius: 28px;
+  max-height: 90vh;
+  height: 90vh;
 }
 
-.modal-ua-standalone-link {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 10;
-  padding: 0.4rem 0.75rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  color: #333;
-  font-size: 0.85rem;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.2s, box-shadow 0.2s;
+/* UA 모달: X 버튼·스크롤바를 이미지(콘텐츠) 안쪽에 */
+.modal-content.modal-color-sections .modal-close {
+  top: 0.75rem;
+  right: 2rem;
 }
 
-.modal-ua-standalone-link:hover {
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* UA 모달: 스크롤바와 이미지 간격 없음, 스크롤바 스타일(트랙 흰색/썸 보라 그라데이션) */
+.modal-content.modal-color-sections .modal-body {
+  padding-right: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #7c3aed var(--color-white);
+}
+
+.modal-content.modal-color-sections .modal-body .ua-page-sections {
+  padding-right: 0;
+}
+
+/* 팝업에서도 UaSections 사용 → 별도 링크와 동일한 구조/스타일 */
+.modal-body .ua-page-sections {
+  padding: 0;
+}
+
+.modal-body .ua-page-sections .ua-section-full-bg {
+  width: 100%;
+}
+
+.modal-body .ua-page-sections .color-section-inner {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* UA 모달: 콘텐츠(섹션)에는 라운드 없음 */
+.modal-body .ua-page-sections .color-section:first-child,
+.modal-body .ua-page-sections .color-section:last-child {
+  border-radius: 0;
+}
+
+.modal-body .ua-page-sections .color-section:last-child .color-section-inner {
+  border-radius: 0;
 }
 
 .modal-image-only-body {
@@ -240,12 +268,13 @@
   padding: 0;
 }
 
-.color-section:first-child {
-  border-radius: 20px 20px 0 0;
+/* 일반 상세 모달에서만 첫/끝 섹션 라운드 (스크롤 시 깨짐 방지로 UA는 .modal-body에서 클리핑) */
+.modal-content:not(.modal-color-sections) .color-section:first-child {
+  border-radius: 28px 28px 0 0;
 }
 
-.color-section:last-child {
-  border-radius: 0 0 20px 20px;
+.modal-content:not(.modal-color-sections) .color-section:last-child {
+  border-radius: 0 0 28px 28px;
 }
 
 .color-section-title {
@@ -322,29 +351,58 @@
   overflow-y: auto;
   overflow-x: hidden;
   flex: 1;
-  /* 스크롤바 커스터마이징 */
+  min-height: 0;
+  border-radius: 28px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  scrollbar-color: #9ca3af rgba(0, 0, 0, 0.04);
 }
 
-/* WebKit 브라우저 (Chrome, Safari) 스크롤바 */
+/* 모든 상세 모달 동일: 스크롤바·라운드 통일 */
 .modal-body::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
 .modal-body::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
   margin: 10px 0;
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
+  background: #9ca3af;
+  border-radius: 9999px;
   min-height: 40px;
 }
 
 .modal-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: #6b7280;
+}
+
+/* UA 모달: 보라 그라데이션 스크롤바, 포인트(썸) 크게 */
+.modal-content.modal-color-sections .modal-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content.modal-color-sections .modal-body::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+}
+
+.modal-content.modal-color-sections .modal-body::-webkit-scrollbar-track {
+  background: var(--color-white);
+  margin: 0;
+  border-radius: 0;
+}
+
+.modal-content.modal-color-sections .modal-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a78bfa 0%, #7c3aed 50%, #5b21b6 100%);
+  border-radius: 0;
+  min-height: 80px;
+  border: none;
+}
+
+.modal-content.modal-color-sections .modal-body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8b5cf6 0%, #6d28d9 100%);
 }
 
 .modal-thumbnail {
@@ -1282,7 +1340,6 @@
 .clickable-image {
   cursor: pointer;
   transition: opacity 0.3s ease;
-  border-radius: 8px;
   width: 100%;
   height: auto;
   display: block;
@@ -1319,14 +1376,38 @@
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
+  overflow-y: auto;
   cursor: default;
+  border-radius: 28px;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af rgba(0, 0, 0, 0.04);
+}
+
+.image-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.image-modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.image-modal-content::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 9999px;
+  min-height: 40px;
+}
+
+.image-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 
 .image-modal-content img {
   max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: 8px;
+  display: block;
 }
 
 .image-modal-close {
